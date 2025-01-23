@@ -1,0 +1,487 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FONT */
+body {
+  font-family: 'Cormorant Garamond', serif;
+  transition: background-color 0.5s, color 0.5s;
+  overflow-x: hidden; /* for any overflow from glows */
+  position: relative;
+}
+
+/* THEME COLORS */
+.light-theme body {
+  background-color: #f7f7f7;
+  color: #2b2b2b;
+}
+.dark-theme body {
+  background-color: #1b1b1b;
+  color: #f1f1f1;
+}
+
+/* NEON COLORS */
+:root {
+  --neon-pink: #ff6ee7;
+  --neon-cyan: #4afff6;
+  --neon-purple: #a561ff;
+  --neon-orange: #ff8f40;
+}
+
+/* ========== BACKGROUND GLOW ========== */
+/* Use fixed positioning so it remains visible when scrolling. */
+body::before,
+body::after,
+html::before,
+html::after {
+  content: "";
+  position: fixed;
+  z-index: -2;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+body::before {
+  width: 300px;
+  height: 300px;
+  background: var(--neon-purple);
+  opacity: 0.2;
+  top: -100px;
+  left: -100px;
+}
+body::after {
+  width: 300px;
+  height: 300px;
+  background: var(--neon-purple);
+  opacity: 0.2;
+  bottom: -150px;
+  right: -100px;
+  filter: blur(100px);
+}
+html::before {
+  width: 250px;
+  height: 250px;
+  background: var(--neon-pink);
+  opacity: 0.15;
+  top: 40%;
+  left: 10%;
+  filter: blur(80px);
+}
+html::after {
+  width: 250px;
+  height: 250px;
+  background: var(--neon-pink);
+  opacity: 0.15;
+  bottom: 20%;
+  right: 15%;
+  filter: blur(80px);
+}
+
+/* ========== HEADINGS / SECTIONS ========== */
+.section-spacing {
+  padding: 4rem 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  position: relative;
+  border: 2px solid var(--border-color, rgba(255,255,255,0.2));
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+/* Darker border in light mode */
+.light-theme .section-spacing {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* ========== HEADER / NAVBAR ========== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s;
+}
+.site-header:hover {
+  transform: scale(1.02);
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.site-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.site-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* NAVIGATION */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--neon-pink);
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.nav-btn {
+  background: rgba(255,255,255,0.05);
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid var(--neon-pink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.nav-btn:hover {
+  background-color: var(--neon-pink);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 8px var(--neon-pink), 0 0 12px var(--neon-pink);
+}
+
+/* Remove tooltip text from display */
+.tooltip-text {
+  display: none !important;
+}
+
+/* ========== THEME TOGGLE BUTTON ========== */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 50px; 
+  height: 50px;
+  background-color: var(--neon-purple);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-toggle-btn:hover {
+  background-color: var(--neon-cyan);
+  transform: scale(1.07);
+  box-shadow: 0 0 10px var(--neon-cyan), 0 0 15px var(--neon-cyan);
+}
+
+/* ========== ABOUT SECTION ========== */
+.section-content {
+  text-align: center;
+}
+.section-content h2 {
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+.section-content p {
+  font-size: 1.3rem;
+  line-height: 1.65;
+  margin: 1rem 0;
+}
+
+/* Profile image with circular border */
+.profile-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 2rem auto;
+  display: block;
+
+  /* Add a background with a gradient */
+  background: linear-gradient(40deg, rgba(72,139,214,1) 21%, rgba(79,26,211,1) 68%, rgba(31,183,182,1) 100%);
+  padding: 6px; /* Width of the border */
+
+
+  /* Ensure the image itself stays above the gradient */
+  position: relative;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== SKILLS SECTION ========== */
+.skills-list {
+  list-style: none;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+}
+.skills-list li {
+  margin: 0.5rem 0;
+}
+
+/* ========== PROJECTS SECTION ========== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.project-card {
+  background: rgba(255,255,255,0.07);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 2px solid var(--border-color, rgba(255,255,255,0.2));
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 8px var(--neon-cyan);
+}
+.light-theme .project-card {
+  border-color: rgba(0,0,0,0.2);
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact-links {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn-with-icon {
+  background: rgba(255,255,255,0.05);
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid var(--neon-pink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: var(--neon-pink);
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-with-icon:hover {
+  background-color: var(--neon-pink);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 8px var(--neon-pink), 0 0 12px var(--neon-pink);
+}
+
+/* Collapsible Form */
+.toggle-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+.toggle-btn {
+  background-color: var(--neon-pink);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.toggle-btn:hover {
+  background-color: var(--neon-purple);
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--neon-purple), 0 0 12px var(--neon-purple);
+}
+.toggle-arrow {
+  font-size: 1.3rem;
+}
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+}
+
+/* Contact Form */
+.form-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.form-control {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.col {
+  flex: 1;
+}
+.send-btn {
+  background-color: var(--neon-purple);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+  font-size: 1.05rem;
+}
+.send-btn:hover {
+  background-color: var(--neon-cyan);
+  transform: scale(1.03);
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+.thank-you-msg {
+  display: none;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* ========== SCROLL TO TOP BUTTON ========== */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 50px; 
+  height: 50px;
+  background-color: var(--neon-pink);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 1.2rem;
+  z-index: 999;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-to-top-btn:hover {
+  background-color: var(--neon-orange);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px var(--neon-orange), 0 0 15px var(--neon-orange);
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+/* ========== ANIMATE ON SCROLL ========== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  /* Stack header content */
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+/* The overall header uses flex to separate the logo-container and the nav */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* space between logo-container and nav */
+  padding: 1rem 2rem;
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Container that holds logo, title, and hamburger */
+.logo-container {
+  display: flex;
+  align-items: center;
+  /* No need for justify-content: space-between here, 
+     because we’ll let margin-left:auto on .menu-toggle push it over. */
+}
+
+/* Logo styling (optional) */
+.site-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* By default, hide the hamburger on large screens */
+.menu-toggle {
+  margin-left: 10rem;   /* push hamburger icon to far right within .logo-container */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--neon-pink);
+  display: none;       /* hidden on desktop */
+}
+
+/* The nav menu is displayed by default on large screens */
+.main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERY for small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;  /* show hamburger icon on mobile */
+  }
+
+  /* Hide the nav by default, until you toggle .open class in JS */
+  .main-nav {
+    display: none;
+  }
+  .main-nav.open {
+    display: block;       /* show nav when “open” */
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;   /* center the items */
+  }
+
+  /* Stack nav items on small screens */
+  .main-nav ul {
+    flex-direction: column;
+    gap: rem;
+  }
+}

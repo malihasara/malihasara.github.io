@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Maliha Sara</title>
+  <meta name="description" content="Official website of Maliha Sara, Electrical & Computer Engineering major at NYU.">
+  <meta name="keywords" content="Maliha Sara, ECE, NYU, Robotics, Digital Electronics, Resume, Con Edison">
+  <meta name="author" content="Maliha Sara">
+
+  <!-- Google Fonts (Minimalistic Serif Example) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" 
+    rel="stylesheet"
+  >
+
+  <!-- Google Icon Fonts -->
+  <link 
+    href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+    rel="stylesheet"
+  >
+  <!-- Font Awesome -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script 
+    src="https://kit.fontawesome.com/6a2a583ad9.js" 
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Animate.css for simple animations -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="assets/images/ve.jpeg" alt="Logo for Maliha Sara" class="site-logo"/>
+      <h1 class="site-title">Maliha Sara</h1>
+
+      <!-- Hamburger Button (hidden on large screens) -->
+      <button id="menuToggleBtn" class="menu-toggle">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  
+    
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <!-- DIRECT LINK to Resume PDF -->
+        <li>
+          <a 
+            href="assets/resume/maliha_sara_resume.pdf" 
+            target="_blank" 
+            class="nav-btn"
+          >
+            <i class="fa fa-file"></i> Resume
+          </a>
+        </li>
+        <li>
+          <a href="#aboutSection" class="nav-btn">
+            <i class="fa fa-user"></i> About
+          </a>
+        </li>
+        <li>
+          <a href="#skillsSection" class="nav-btn">
+            <i class="fa fa-lightbulb-o"></i> Skills
+          </a>
+        </li>
+        <li>
+          <a href="#projectsSection" class="nav-btn">
+            <i class="fa fa-code"></i> Projects
+          </a>
+        </li>
+        <li>
+          <a href="#contactSection" class="nav-btn">
+            <i class="fa fa-envelope"></i> Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <!-- THEME TOGGLE (BOTTOM-RIGHT) -->
+  <button id="themeToggleBtn" class="theme-toggle-btn">
+    <i class="fa fa-adjust"></i>
+  </button>
+
+  <!-- ABOUT ME SECTION -->
+  <section class="about-section section-spacing animate-on-scroll" id="aboutSection">
+    <div class="section-content">
+      <h2>About Me</h2>
+      <div class="profile-img"><img 
+        src="assets/images/grad.jpeg" 
+        alt="Maliha Sara Profile" 
+        class="animate-on-scroll"
+      ></div>
+      <p>
+        Hello! I’m <strong>Maliha Sara</strong>, an Electrical and Computer Engineering student (with a minor in Math) at NYU, 
+        proudly maintaining a 4.0 GPA. Currently, I work at Con Edison in New York, where I enjoy applying my passion 
+        for <em>robotics</em> and <em>digital electronics</em>. I love tackling new challenges and continuously strive 
+        to expand my technical expertise.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="skills-section section-spacing animate-on-scroll" id="skillsSection">
+    <div class="section-content">
+      <h2>My Skills</h2>
+      <p>
+        Below are some of the core skills I've developed through my education and experience:
+      </p>
+      <ul class="skills-list">
+        <li><i class="fa fa-caret-right"></i> Robotics</li>
+        <li><i class="fa fa-caret-right"></i> Digital Circuit Design</li>
+        <li><i class="fa fa-caret-right"></i> Programming (C++, Python)</li>
+        <li><i class="fa fa-caret-right"></i> PCB Layout &amp; Soldering</li>
+        <li><i class="fa fa-caret-right"></i> Data Structures &amp; Algorithms</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects-section section-spacing animate-on-scroll" id="projectsSection">
+    <div class="section-content">
+      <h2>Projects</h2>
+      <p>Here are a few projects I've worked on:</p>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Autonomous Robot</h3>
+          <p>Designed and programmed a line‐following robot with ultrasonic obstacle detection.</p>
+        </div>
+        <div class="project-card">
+          <h3>Smart Home System</h3>
+          <p>Developed a home automation system using Raspberry Pi and custom sensor modules.</p>
+        </div>
+        <div class="project-card">
+          <h3>Personal Portfolio</h3>
+          <p>This website! Implementing advanced CSS &amp; JavaScript features with a neon aesthetic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT ME SECTION (with form) -->
+  <section class="contact-section section-spacing animate-on-scroll" id="contactSection">
+    <div class="section-content">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out if you have any questions or opportunities!</p>
+
+      <!-- Contact links as icons -->
+      <div class="contact-links">
+        <a 
+          href="https://github.com/malihasara" 
+          target="_blank" 
+          class="btn-with-icon"
+        >
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a 
+          href="https://www.linkedin.com/in/maliha-sara" 
+          target="_blank" 
+          class="btn-with-icon"
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+      
+      <!-- Collapsible "Send a Message" -->
+      <div class="toggle-container">
+        <button class="toggle-btn" id="toggleContactFormBtn">
+          <span class="material-icons toggle-arrow">expand_more</span>
+          <span class="toggle-text">Send a Message</span>
+        </button>
+
+        <!-- Collapsible form content -->
+        <div class="collapsible-content" id="contactFormContainer">
+          <form 
+            action="https://formsubmit.co/smaliha275@gmail.com" 
+            method="POST" 
+            id="emailForm"
+          >
+            <div class="row">
+              <div class="col">
+                <label for="first-name" class="form-label">First Name:</label>
+                <input 
+                  type="text" 
+                  name="first name" 
+                  class="form-control" 
+                  id="first-name" 
+                  required
+                />
+              </div>
+              <div class="col">
+                <label for="last-name" class="form-label">Last Name:</label>
+                <input 
+                  type="text" 
+                  name="last name" 
+                  class="form-control" 
+                  id="last-name" 
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input 
+                type="email" 
+                name="email" 
+                class="form-control" 
+                id="email" 
+                placeholder="Email Address" 
+                required
+              />
+            </div>
+
+            <input 
+              type="hidden" 
+              name="_subject" 
+              value="Message from Personal Website"
+            />
+
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject:</label>
+              <input 
+                type="text" 
+                name="subject" 
+                class="form-control" 
+                placeholder="Email Subject" 
+                required
+              >
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message:</label>
+              <textarea 
+                name="message" 
+                class="form-control" 
+                id="message" 
+                rows="3" 
+                placeholder="Write Your Message Here!" 
+                required
+              ></textarea>
+            </div>
+
+            <!-- Auto Reply -->
+            <input 
+              type="hidden" 
+              name="_autoresponse" 
+              value="Thank you for contacting me! I'll get back to you as soon as possible. -Maliha"
+            >
+
+            <!-- Table Template -->
+            <input 
+              type="hidden" 
+              name="_template" 
+              value="table"
+            >
+
+            <!-- Thank You Page (optional) -->
+            <input 
+              type="hidden" 
+              name="_next" 
+              value="https://tahasinshadat.github.io/index.html"
+            >
+
+            <button type="submit" class="btn send-btn btn-with-icon">
+              <i class="fa fa-paper-plane"></i> Send
+            </button>
+          </form>
+
+          <div id="thankYouMessage" class="thank-you-msg">
+            <h3>Thank You!</h3>
+            <p>Your submission has been sent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Maliha Sara</p>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
