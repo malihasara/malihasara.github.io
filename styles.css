@@ -25,8 +25,8 @@ body {
 
 /* NEON COLORS */
 :root {
-  --neon-pink: #ff6ee7;
-  --neon-cyan: #4afff6;
+  --neon-pink: #e82fc9;
+  --neon-cyan: #5ffff7;
   --neon-purple: #a561ff;
   --neon-orange: #ff8f40;
 }
@@ -100,7 +100,7 @@ html::after {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(8px);
   transition: transform 0.3s;
 }
@@ -138,7 +138,7 @@ html::after {
   transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .nav-btn {
-  background: rgba(255,255,255,0.05);
+  background: rgba(178, 14, 14, 0.05);
   padding: 0.5rem 0.8rem;
   border-radius: 20px;
   border: 1px solid var(--neon-pink);
@@ -421,7 +421,7 @@ html::after {
   align-items: center;
   justify-content: space-between; /* space between logo-container and nav */
   padding: 1rem 2rem;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(152, 97, 215, 0.084);
   backdrop-filter: blur(8px);
 }
 
